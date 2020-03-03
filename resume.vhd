@@ -76,11 +76,3 @@ architecture arch of thing is (
         Q <= A and b
 );
 end arch
-
-airmon-ng start wlan0
-  422  airmon-ng check kill
-  423  airodump-ng start wlan0mon
-  424  airodump-ng  wlan0mon
-  425  airmon-ng stop wlan0mon
-  426  service networking restart
-  427  service network-manager restart
