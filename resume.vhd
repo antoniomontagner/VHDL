@@ -31,7 +31,7 @@ entity mux is port
         sel: in std_logic_vector(1 downto 0);
         a: in std_logic_vector (3 downto 0);
 
-        o: out std_logic
+        x: out std_logic
     );
 end mux
 
@@ -39,6 +39,10 @@ architecture arch of mux is
     begin
         with sel select 
             x <= a(0) when "00",
+            x <= a(1) when "01",
+            x <= a(2) when "10",
+    end arch;
+
 
 -----------------------------------------------
 entity decod is port
